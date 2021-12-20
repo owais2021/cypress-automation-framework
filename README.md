@@ -129,5 +129,3 @@ Run Command on Gitbash Terminal **npm install --save-dev chai**
 Great Course on Udemy for Cypress V8- UI Automation Testing + API Testing + Frameworks
 
 **https://www.udemy.com/course/cypress-io-master-class/**
-
-
