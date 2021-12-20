@@ -10,7 +10,8 @@
     "triggerAllTests-dashboard": "npx cypress run --record --key 4a686efb-fa81-4e89-b75f-18607c709d2f",
     "triggerAllTests-webdriveruni": "npx cypress run --spec cypress/integration/webdriver-uni/*",
     "triggerAllTests-autoTestStore": "npx cypress run --spec cypress/integration/automation-test-store/*",
-    "triggerAllTests-autoTestStore-dashboard": "npx cypress run --spec cypress/integration/automation-test-store/* --record --key 4a686efb-fa81-4e89-b75f-18607c709d2f --parallel",
+    "triggerAllTests-autoTestStore-dashboard": "npx cypress run --spec cypress/integration/automation-test-store/* --record --key 4a686efb-fa81-4e89-b75f-18607c709d2f --parallel --browser chrome --headed",
+    "triggerAllTests-cucumberTests": "npx cypress run --spec cypress/integration/webdriver-uni/features/*.feature --browser chrome",
     "junit-merge": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/results.xml",
     "delete-junit-report": "rm -rf cypress/results/junit/results.xml",
     "delete-results": "rm -rf cypress/results/* || true",
@@ -23,7 +24,8 @@
   "author": "Owais Khan",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^9.1.0",
+    "cypress": "^9.1.1",
+    "cypress-cucumber-preprocessor": "^4.1.0",
     "cypress-file-upload": "^5.0.8",
     "cypress-multi-reporters": "^1.5.0",
     "cypress-xpath": "^1.6.2",
@@ -32,5 +34,8 @@
     "mochawesome": "^7.0.1",
     "mochawesome-merge": "^4.1.0",
     "mochawesome-report-generator": "^6.0.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
   }
 }
